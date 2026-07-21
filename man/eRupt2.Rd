@@ -7,7 +7,8 @@
 eRupt2(results, alpha = 0.05, FCsig = 1, geneID = "Gene")
 }
 \arguments{
-\item{results}{Dataframe of results}
+\item{results}{Dataframe of results. Must contain columns named "padj"
+and "log2FoldChange", plus a gene identifier column (see \code{geneID}).}
 
 \item{alpha}{alpha value for significance}
 
@@ -16,9 +17,9 @@ eRupt2(results, alpha = 0.05, FCsig = 1, geneID = "Gene")
 \item{geneID}{Column for labeling genes}
 }
 \value{
-A dataframe of Ensembl IDs, gene symbols, and any additional
-attributes (if chosen)
+A ggplot2 volcano plot object
 }
 \description{
-This function plots a volcano plot for RNAseq results
+This function plots a volcano plot for RNAseq differential expression
+results, colouring points by significance and labelling the top 10 hits.
 }

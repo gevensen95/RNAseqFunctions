@@ -19,7 +19,7 @@ convert_gene_names <- function(genes, species = 'mouse',
                     stop("Species not supported. Use 'mouse' or 'human'."))
 
   # Connect to the Ensembl database
-  ensembl <- biomaRt::useMart("ensembl", dataset = dataset)
+  ensembl <- biomaRt::useEnsembl(biomart = "genes", dataset = dataset)
 
   # Choose the appropriate symbol attribute
   species_attr <- if (species == "mouse") "mgi_symbol" else "hgnc_symbol"

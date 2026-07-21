@@ -7,9 +7,9 @@
 convert_ensembl_to_symbol(ensembl_ids, species = "mouse", attributes = NULL)
 }
 \arguments{
-\item{ensembl_ids}{Vector of Ensembl IDS}
+\item{ensembl_ids}{Vector of Ensembl IDs}
 
-\item{species}{Species}
+\item{species}{Species ("mouse" or "human")}
 
 \item{attributes}{Additional attributes to retrieve}
 }
@@ -18,5 +18,6 @@ A dataframe of Ensembl IDs, gene symbols, and any additional
 attributes (if chosen)
 }
 \description{
-This function is automatically converts human or mouse Ensembl IDs to
+Convenience wrapper around \code{\link[=convert_gene_names]{convert_gene_names()}} that looks up gene
+symbols for a vector of Ensembl gene IDs.
 }
